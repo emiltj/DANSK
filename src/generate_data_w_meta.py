@@ -157,6 +157,16 @@ def main():
         docs_json_w_meta = add_meta_to_json_docs(docs_json, meta_data_dict)
         write_to_jsonl(docs_json_w_meta, f"data/{p}.jsonl")
 
+    return docs_json_w_meta
+
+
+docs_json_w_meta = main()
+
+docs_json_w_meta[0]["dagw_domain"]
+
+
+for doc in docs_json_w_meta:
+    print(doc["dagw_source"])
 
 if __name__ == "__main__":
     main()

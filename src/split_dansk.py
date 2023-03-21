@@ -17,8 +17,8 @@ def partitioning():
     ten_percent = len(dansk_docs) // 100 * 10
     partitions = {
         "train": dansk_docs[ten_percent * 2 :],
-        "dev": dansk_docs[:ten_percent],
-        "test": dansk_docs[ten_percent : ten_percent * 2],
+        "test": dansk_docs[:ten_percent],
+        "dev": dansk_docs[ten_percent : ten_percent * 2],
     }
 
     # Save split files and print tag counts to terminal
